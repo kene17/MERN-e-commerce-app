@@ -8,7 +8,7 @@ connectDB();
 
 const importData = async () => {
   try {
-    await Product.deleteMany({});
+    await Product.deleteMany({});// deletes everything in the database currently
 
     await Product.insertMany(productsData);
 

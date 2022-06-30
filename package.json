@@ -9,7 +9,6 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "data:import": "node backend/seederScript.js"
-  
   },
   "repository": {
     "type": "git",
@@ -23,12 +22,18 @@
   },
   "homepage": "https://github.com/kene17/MERN-e-commerce-app#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.6"
+    "mongoose": "^6.3.6",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
-    "concurrently": "^7.2.1",
+    "concurrently": "^7.2.2",
     "nodemon": "^2.0.16"
   }
 }
