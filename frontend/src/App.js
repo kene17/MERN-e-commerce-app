@@ -4,11 +4,17 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import Navbar from "./components/Navbar";
+import Backdrop from "./components/Backdrop";
+import SideDrawer from "./components/SideDrawer";
+import { useState } from "react";
 function App() {
+  const [sideToggle, setSideToggle] = useState(false);
   return (
     <div className="app">
       <Router>
-        <Navbar />
+        <Navbar click={()=>setSideToggle(true)}/>       
+        <SideDrawer show={sideToggle} click={()=>setSideToggle(false)}/>
+        <Backdrop show={sideToggle} click={()=>setSideToggle(false)}/>{/* if the show prop is false then the backdrop will be hidden */}
         <main>
           <Routes>
             <Route exact path="/" element={<HomeScreen />} />

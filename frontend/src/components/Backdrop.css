@@ -1,0 +1,10 @@
+.backdrop{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100; /** should be greater than the navbar that was set at 50 */
+    position: fixed; /**so when you scroll it does not move */
+    top: 0;
+    left: 0;
+
+}
